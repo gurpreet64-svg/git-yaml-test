@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gurpreet Kaur | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li {
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00f2fe;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  text-align: center;
+}
+
+.hero-content {
+  padding: 50px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #00f2fe;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00f2fe;
+}
+
+/* Section */
+section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #00f2fe;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Background Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 242, 254, 0.2);
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.circle1 { width: 200px; height: 200px; top: 10%; left: 5%; }
+.circle2 { width: 150px; height: 150px; bottom: 15%; right: 10%; }
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(40px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+
+<nav class="glass">
+  <h1>Gurpreet Kaur</h1>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Skills</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-content glass">
+    <h2>Hello, I'm <span>Gurpreet</span></h2>
+    <p>
+      Senior Agile Project Manager with 10+ years of experience in Cloud, SaaS Platforms, 
+      Data Engineering & Dashboard Analytics. Passionate about driving scalable solutions 
+      and delivering high-impact technology initiatives.
+    </p>
+    <a href="#contact" class="btn">Let's Connect</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="glass card">
+    <p>
+      I specialize in Agile/Scrum delivery, Cloud Cost Optimization, Databricks Workspace 
+      Management, AWS Infrastructure, and SaaS Dashboard Strategy. 
+      I bridge business and engineering teams to ensure smooth execution, 
+      measurable impact, and scalable architecture.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Core Expertise</h2>
+  <div class="cards">
+    <div class="glass card">
+      <h3>Agile & Scrum Leadership</h3>
+      <p>End-to-end delivery management for complex enterprise programs.</p>
+    </div>
+    <div class="glass card">
+      <h3>Cloud & AWS</h3>
+      <p>Infrastructure planning, cost optimization & performance monitoring.</p>
+    </div>
+    <div class="glass card">
+      <h3>Data & Analytics</h3>
+      <p>SaaS dashboards, cluster metrics, resource tracking & reporting insights.</p>
+    </div>
+    <div class="glass card">
+      <h3>Technical Stack</h3>
+      <p>Java, Quarkus, Linux, EC2, System Architecture & DevOps workflows.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="glass card" style="text-align:center;">
+    <p>Open to leadership roles, cloud strategy discussions, and high-impact collaborations.</p>
+    <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Gurpreet Kaur | Designed with Modern Glass UI
+</footer>
+
+</body>
+</html>
