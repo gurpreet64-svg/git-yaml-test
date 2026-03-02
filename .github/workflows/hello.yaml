@@ -10,6 +10,7 @@
  jobs:
 
 # this is the name of the job
+#job 1
     greet:
   # this is gitbub runner
       runs-on: ubuntu-latest
@@ -18,3 +19,10 @@
           run: echo "Hello Dosto"
         - name: say hello to username
           run: echo "Hello $USER"
+  #job 2
+     details:
+       runs-on: ubuntu-latest
+       steps:
+        name: show what is the version o Python, docker etc
+        run: docker --version && python --version
+       
