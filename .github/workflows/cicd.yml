@@ -6,26 +6,26 @@ on:
   workflow_dispatch: 
 
 jobs:
-        codes:
-          runs-on: ubuntu-latest
-         steps:
-           - name: checkout code
+    codes:
+     runs-on: ubuntu-latest
+     steps:
+         - name: checkout code
            step: echo "code clone from github"
            
-        Build:
-         runs-on: ubuntu-latest
-         steps: 
-          - name: Build docker container
+     Build:
+       runs-on: ubuntu-latest
+       steps: 
+         - name: Build docker container
            step: echo "docker container build"
 
-        Test:
-          runs-on: ubuntu-latest
-         steps: 
-          - name: Test the container
-           step: echo "testing the container"
+     Test:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Test the container
+          step: echo "testing the container"
 
-        Deploy:
-         runs-on: ubuntu-latest
-         steps: 
-          - name: Deploy the container
-           step: echo "Docker compose Deploy the app"
+    Deploy:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: Deploy the container
+         step: echo "Docker compose Deploy the app"
