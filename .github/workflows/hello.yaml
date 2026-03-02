@@ -9,7 +9,7 @@
 # these are jobs inside the workflow
  jobs:
 
-# this is the name of the job #job 1
+# this is the name of the job 1
     greet:
   # this is gitbub runner
       runs-on: ubuntu-latest
