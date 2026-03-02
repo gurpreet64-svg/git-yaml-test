@@ -8,7 +8,7 @@
 
 # these are jobs inside the workflow
  jobs:
-  greet:
+     greet:
 
    # this is gitbub runner
       runs-on: ubuntu-latest         
@@ -22,6 +22,6 @@
       # this is gitbub runner
        runs-on: ubuntu-latest
        steps:
-        name: show what is the version o Python, docker etc
-        run: docker --version && python --version
+        - name: show what is the version o Python, docker etc
+         run: docker --version && python --version
        
