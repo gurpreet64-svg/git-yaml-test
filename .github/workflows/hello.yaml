@@ -19,8 +19,9 @@
           run: echo "Hello Dosto"
         - name: say hello to username
           run: echo "Hello $USER"
-  #job 2
+
      details:
+      # this is gitbub runner
        runs-on: ubuntu-latest
        steps:
         name: show what is the version o Python, docker etc
