@@ -1,5 +1,5 @@
 # This is workflow name
- name: Hello
+ name: Hello workflow
 
 # runs on a trigger
  on:
@@ -8,12 +8,13 @@
 
 # these are jobs inside the workflow
  jobs:
+
 # this is the name of the job
     greet:
-  # this is gitbub ruber
-    runs-on: ubuntu-latest
-    steps:
+  # this is gitbub runner
+      runs-on: ubuntu-latest
+      steps:
         - name: say hello to users
-         run: echo "Hello Dosto"         
+          run: echo "Hello Dosto"
         - name: say hello to username
-         run: echo "Hello $USER"
+          run: echo "Hello $USER"
