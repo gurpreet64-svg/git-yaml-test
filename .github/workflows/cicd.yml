@@ -3,25 +3,29 @@ name: CICD
 on:
   workflow_dispatch: null
 jobs:
-  codes:
+# every job need seperate runner called parallelism 
+  Code:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
         run: echo "code clone from github"
   
   Build:
+    needs: Code
     runs-on: ubuntu-latest
     steps:
       - name: Build docker container
         run: echo "docker container build"
   
   Test:
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - name: Test the container
         run: echo "testing the container"
   
   Deploy:
+    needs: [Build,Test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the container
