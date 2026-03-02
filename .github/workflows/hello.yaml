@@ -5,6 +5,8 @@
  on:
     push:
       branches: [main]
+      # this is known as filtering that when usr make any changes to these files then only runner trigger
+      
       paths:
         - '**.htlm'
         - '**.yml'
