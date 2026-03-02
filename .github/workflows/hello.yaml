@@ -11,8 +11,9 @@
 
 # this is the name of the job 1
     greet:
-  # this is gitbub runner
-      runs-on: ubuntu-latest
+
+   # this is gitbub runner
+      runs-on: ubuntu-latest         
       steps:
         - name: say hello to users
           run: echo "Hello Dosto"
